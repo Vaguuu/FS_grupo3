@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
+
+/* TIPOGRAFIAS */
+    * {
+        font-family: Oxygen, Verdana, Tahoma, sans-serif;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.75rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+
+/* COLORES */
+    /* Global */
+    /* Nav */
+    /* Main */
+    /* Footer */
+
+/* LAYOUTS */
+    /* Nav */
+        nav {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .name {
+            display: grid;
+            grid-template-columns: 1fr 8fr;
+            text-align: left;
+            align-items: center;
+            column-gap: 1%;
+        }
+        .name img {
+            padding-left: 20%;
+        }
+        .menu {
+            display: grid;
+            text-align: right;
+            align-items: center;
+        }
+        .menu li {
+            list-style: none;
+            display: inline-block;
+            margin: 1%;
+        }
+        #logo {
+            width: 2rem;
+        }
+    /* Main CV */
+    .contacto {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        padding: 1%;
+    }
+    aside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3%;
+    }
+    aside img {
+        max-width: 100%;
+        max-height: 100%;
+        vertical-align: middle;
+    }
+    /* Footer */
+        .adress {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 1%;
+            align-items: center;
+        }
+        .text_adress {
+            text-align: right;
+        }
+        .map {
+            text-align: left;
+        }
+        .redes {
+            text-align: center;
+        }
+        .redes li {
+            list-style: none;
+            display: inline-block;
+            margin: 1%;
+        }
+        .redes img {
+            vertical-align: middle;
+        }
+/* BOTONES */
+    /* Nav */
+        nav button{
+            font-size: 1rem;
+            border-radius: 10%;
+            margin: 0,5%;
+        }
+    /* Formulario */
+        #enviar {
+            margin: 1%;
+            width: fit-content;
+            margin-left: 32.5%;
+        }
+    /* Footer */
+        .redes button{
+            border-radius: 10%;
+            margin: 1%;
+            padding: 10%;
+        }
+        .redes img{
+            width: 2rem;
+        }
+/* FORMULARIO */
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+    }
+    input {
+        max-width: 75%;
+    }
+    textarea {
+        max-width: 75%;
+        height: 5rem;
+    }
