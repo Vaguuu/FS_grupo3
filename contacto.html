@@ -26,22 +26,50 @@
         <div class="contacto">
         <section>
             <h2>Contacto</h2>
-            <form action="procesar_formulario.php" method="post">
-                <label for="nombre">Nombre:</label> <input type="text" id="nombre" name="nombre" required>
+            <form name="formulario" id="formulario">
+                <div class="grupo" id="nombre">
+                    <div class="campo">
+                        <label for="nombre" class="nombre">Nombre:</label> 
+                        <input type="text" class=input id="nombre" name="nombre" placeholder="Nombre Apellido"> 
+                        <i class="error fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="msj_error">Debe colocar su nombre y apellido.</p>
+                </div>
+                <div class="grupo" id="email">
+                    <div class="campo">
+                        <label for="email" class="email">Correo electrónico:</label>
+                        <input type="email" class=input id="email" name="email" placeholder="correo@electronico.com">
+                        <i class="error fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="msj_error">Ingrese un correo electrónico válido.</p>
+                </div>
+                <div class="grupo" id="tel">
+                    <div class="campo">
+                    <label for="tel" class="tel">Teléfono:</label>
+                    <input type="text" class=input id="tel" name="tel" placeholder="1122223333">
+                    <i class="error fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="msj_error">Ingrese sólo números.</p>
+                </div>
+                <div class="grupo" id="mensaje">
+                    <label for="mensaje" class="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" class="mensaje" name="mensaje" maxlength="500" onfocus="this.value='';">Escriba su consulta...</textarea>
+                </div>
+                <div class="error_formulario" id="error_formulario">
+                    <p><i class="fa-solid fa-triangle-exclamation" style="color: #cc0000;"></i> <b>Error:</b> Por favor, complete todos los campos.</p>
+                </div>
                 <br>
-                <label for="email">Email:</label> <input type="email" id="email" name="email">
                 <br>
-                <label for="tel">Teléfono:</label> <input type="tel" id="tel" name="tel" pattern="[0-9]*" title="Ingrese sólo números" required>
-                <br>
-                <label for="mensaje">Mensaje:</label> <textarea id="mensaje" name="mensaje" maxlength="500" onfocus="this.value='';" required>Escriba su consulta...</textarea>
-                <br>
-                <input id="enviar" type="submit" value="Enviar">
+                <input id="enviar" class="enviar" type="submit" value="Enviar">
+                <p class="exito_formulario" id="exito_formulario">Su mensaje se ha enviado correctamente.</p>
             </form>
         </section>
         <aside>
             <a href="https://doq.chat/bolmic" target="_blank" title="Ir a Doqchat"><img src="img\doqchat.png" alt="Doqchat"></a>
         </aside>
         </div>
+        <script src="js/script.js"></script>
+        <script src="https://kit.fontawesome.com/78d8053161.js" crossorigin="anonymous"></script>
     </main>
     <footer>
         <div class="adress">

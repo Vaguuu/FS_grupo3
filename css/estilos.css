@@ -16,12 +16,20 @@
     p{
         font-size: 1rem;
     }
+    label{
+        font-weight: bold;
+    }
+    .msj_error{
+        font-size: smaller;
+    }
 
 /* COLORES */
     /* Global */
     /* Nav */
     /* Main */
     /* Footer */
+    /* Formulario */
+
 
 /* LAYOUTS */
     /* Nav */
@@ -55,20 +63,21 @@
     /* Main CV */
     .contacto {
         display: grid;
-        grid-template-columns: 3fr 1fr;
+        grid-template-columns: 3fr 2fr;
         padding: 1%;
     }
     aside {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 3%;
+        padding: 1%;
     }
     aside img {
         max-width: 100%;
         max-height: 100%;
         vertical-align: middle;
     }
+    
     /* Footer */
         .adress {
             display: grid;
@@ -99,12 +108,13 @@
             font-size: 1rem;
             border-radius: 10%;
             margin: 0,5%;
+            cursor: pointer;
         }
     /* Formulario */
         #enviar {
             margin: 1%;
             width: fit-content;
-            margin-left: 32.5%;
+            margin-left: 40%;
         }
     /* Footer */
         .redes button{
@@ -121,10 +131,56 @@
         flex-direction: column;
         padding: 5%;
     }
-    input {
-        max-width: 75%;
+    .campo{
+        position: relative;
     }
-    textarea {
-        max-width: 75%;
+    input {
+        width: 100%;
+        cursor: text;
+        border-radius: 3px;
+        transition: .3s ease all;
+    }
+    input:focus {
+        border: 3px solid;
+        outline: none;
+    }
+    .mensaje {
+        width: 100%;
         height: 5rem;
     }
+    .msj_error {
+        margin: 0%;
+        display: none;
+    }
+    .msj_error-activo {
+        display: block;
+    }
+    .error {
+        position: absolute;
+        right: 0%;
+        top: 55%;
+        z-index: 100;
+        opacity: 0;
+    }
+    .grupo_exito .error {
+        color:green;
+        opacity: 1;
+    }
+    .grupo_error .error {
+        color:red;
+        opacity: 1;
+    }
+    .error_formulario{
+        display: none;
+    }
+    .error_formulario-activo {
+        display: block;
+    }
+    .exito_formulario{
+        display: none;
+    }
+    .exito_formulario-activo {
+        display: block;
+    }
+    
+/* MEDIAQUERIES */
