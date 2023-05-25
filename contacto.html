@@ -4,24 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Dra. Micaela Bologna</title>
+    <link rel="icon" type="image/title-icon" href="./img/favicon.ico">
     <link rel="stylesheet" href="css/estilos.css">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
 </head>
 <body>
-    <nav>
-        <div class="name">
-            <img id="logo" src="img\logo.png" alt="logo">
-            <h1>Dra. Micaela Bologna</h1>
-        </div> 
-        <div class="menu">
-            <ul>
-                <li><a href="index.html" title="Ir a inicio"> <button>Inicio</button></a> </li>
-                <li><a href="cv.html" title="Ir a 'Sobre mi'"><button>Sobre mi</button></a> </li>
-                <li><a href="publicaciones.html" title="Ir a Publicaciones"><button>Publicaciones</button></a> </li>
-                <li><a href="contacto.html" title="Ir a formulario de Contacto"><button>Contacto</button></a></li>
-            </ul>
-        </div>
-    </nav>
+    <header class="header">
+        <nav class="navbar">
+            <div class="name">
+                <img id="logo" src="img\logo.png" alt="logo">
+                <h1>Dra. Micaela Bologna</h1>
+                <br>
+                <p class="subtext">
+                    Médica Ginecóloga y Obstetra.
+            </div> 
+            <div class="menu">
+                <ul class="navButton" id="navButton">
+                    <li><a href="index.html" title="Ir a inicio"> <button class="sin-bordes">Inicio</button></a> </li>
+                    <li><a href="publicaciones.html" title="Ir a Publicaciones"><button class="sin-bordes">Publicaciones</button></a> </li>
+                    <li><a href="cv.html" title="Ir a 'Sobre mi'"><button class="sin-bordes">Sobre mí</button></a> </li>
+                    <li><a href="contacto.html" title="Ir a formulario de Contacto"><button class="sin-bordes">Contacto</button></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <main>
         <div class="contacto">
         <section>
@@ -29,27 +38,27 @@
             <form name="formulario" id="formulario">
                 <div class="grupo" id="nombre">
                     <div class="campo">
-                        <label for="nombre" class="nombre">Nombre:</label> 
-                        <input type="text" class=input id="nombre" name="nombre" placeholder="Nombre Apellido"> 
+                        <label for="nombre" class="nombre">Nombre:</label><br>
+                        <input type="text" class=input id="nombre" name="nombre" placeholder="Nombre Apellido">
                         <i class="error fa-solid fa-circle-xmark"></i>
                     </div>
-                    <p class="msj_error">Debe colocar su nombre y apellido.</p>
+                    <p class="msj_error">Debe colocar su nombre y apellido.</p><br>
                 </div>
                 <div class="grupo" id="email">
                     <div class="campo">
-                        <label for="email" class="email">Correo electrónico:</label>
+                        <label for="email" class="email">Correo electrónico:</label><br>
                         <input type="email" class=input id="email" name="email" placeholder="correo@electronico.com">
                         <i class="error fa-solid fa-circle-xmark"></i>
                     </div>
-                    <p class="msj_error">Ingrese un correo electrónico válido.</p>
+                    <p class="msj_error">Ingrese un correo electrónico válido.</p><br>
                 </div>
                 <div class="grupo" id="tel">
                     <div class="campo">
-                    <label for="tel" class="tel">Teléfono:</label>
+                    <label for="tel" class="tel">Teléfono:</label><br>
                     <input type="text" class=input id="tel" name="tel" placeholder="1122223333">
                     <i class="error fa-solid fa-circle-xmark"></i>
                     </div>
-                    <p class="msj_error">Ingrese sólo números.</p>
+                    <p class="msj_error">Ingrese sólo números.</p><br>
                 </div>
                 <div class="grupo" id="mensaje">
                     <label for="mensaje" class="mensaje">Mensaje:</label><br>
@@ -71,7 +80,7 @@
         <script src="js/script.js"></script>
         <script src="https://kit.fontawesome.com/78d8053161.js" crossorigin="anonymous"></script>
     </main>
-    <footer>
+    <footer class="footer">
         <div class="adress">
             <div class="text_adress">
                 <p>Atención en consultorio particular<br>

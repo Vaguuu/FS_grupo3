@@ -54,6 +54,7 @@ formulario.addEventListener('submit', (e) => {
     e.preventDefault();
     if(campos.nombre && campos.email && campos.tel){
         formulario.reset();
+        document.getElementById('error_formulario').classList.remove('error_formulario-activo')
         document.getElementById('exito_formulario').classList.add('exito_formulario-activo');
         setTimeout(() => document.getElementById('exito_formulario').classList.remove('exito_formulario-activo'), 4000);
         document.querySelectorAll('.grupo_exito').forEach((icono) => {
