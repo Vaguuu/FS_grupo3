@@ -148,7 +148,7 @@ nav {
         flex: 1;
         border-radius: 50%;
         width: 100%;
-        height: 230px;
+        height: auto;
     }
     /*Botones main*/
     .verCV{
@@ -341,10 +341,31 @@ nav {
 }
 /* PUBLICACIONES Y CONFERENCIAS */
 .conf{
+    width: 100%;
     text-align: center;
 }
+.results-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 2%;
+}
+.results-container a{
+    padding: 2%;
+    width: 50%;
+}
+
 /* MEDIAQ */
 @media screen and (max-width: 599px) {
+    .results-container a{
+        padding: 2%;
+        width: 100%;
+    }
+    .video{
+        width: 70%;
+        height: 37%;
+    }
 }
 @media screen and (min-width: 600px) and (max-width: 768px) {
 } 
