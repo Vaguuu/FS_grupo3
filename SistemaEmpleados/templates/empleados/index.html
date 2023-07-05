@@ -1,0 +1,31 @@
+{% include 'header.html' %}
+    <p>"Listado del Staff"</p>
+    <table>
+        <thead>
+            <tr>
+                <th>MN</th>
+                <th>NOMBRE Y APELLIDO</th>
+                <th>ESPECIALIDAD</th>
+                <th>CORREO</th>
+                <th>HORARIOS</th>
+                <th>FOTO</th>
+                <th>ACCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for empleado in empleados %}
+            <tr>
+                <td>{{empleado[0]}}</td>
+                <td>{{empleado[1]}}</td>
+                <td>{{empleado[2]}}</td>
+                <td>{{empleado[3]}}</td>
+                <td>{{empleado[4]}}</td>
+                <td>
+                    <img class="img-thumbnail" src="{{url_for('fotoperfil', nombreFoto=empleado[5])}}" alt="{{(empleado[5])}}" alt="{{empleado[5]}}">
+                </td>
+                <td><a href="/edit/{{empleado[0]}}">Editar</a> | <a href="/delete/{{empleado[0]}}">Borrar</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% include 'footer.html' %}

@@ -1,0 +1,35 @@
+{% include 'header.html' %}
+
+{% with messages= get_flashed_messages() %}
+{% if messages %}
+    <div class="alert alert-danger" role="alert">
+        {% for message in messages %}
+            {{message}} <br>
+        {% endfor %}
+    </div>
+{% endif %}
+{% endwith %}
+
+<form method="post" action="/store" enctype="multipart/form-data">
+    <label for="txtMN">Matrícula Nacional:</label>
+    <input type="text" name="txtMN" id="txtMN">
+    <br>
+    <label for="txtNombre">Nombre y apellido:</label>
+    <input type="text" name="txtNombre" id="txtNombre">
+    <br>
+    <label for="txtEspecialidad">Especialidad:</label>
+    <input type="text" name="txtEspecialidad" id="txtEspecialidad">
+    <br>
+    <label for="txtCorreo">Correo electrónico:</label>
+    <input type="text" name="txtCorreo" id="txtCorreo">
+    <br>
+    <label for="txtHorarios">Horarios:</label>
+    <input type="text" name="txtHorarios" id="txtHorarios">
+    <br>
+    <label for="txtFoto">Foto de perfil:</label>
+    <input type="file" name="txtFoto" id="txtFoto">
+    <br>
+    <br>
+    <input type="submit" value="Agregar">
+</form>
+{% include 'footer.html' %}

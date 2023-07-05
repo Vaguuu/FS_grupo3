@@ -1,0 +1,31 @@
+{% include 'header.html' %}
+Formulario para editar
+{% for empleado in empleados %}
+<form method="post" action="/update" enctype="multipart/form-data">
+    MN:
+    <label>"{{ empleado[0] }}"</label>
+    <br>
+    Nombre y apellido:
+    <label>"{{ empleado[1] }}"</label>
+    <br>
+    Especialidad:
+    <input type="text" value="{{ empleado [2] }}" name="txtEspecialidad" id="txtEspecialidad">
+    <br>
+    Correo electrónico:
+    <input type="text" value="{{ empleado[3] }}" name="txtCorreo" id="txt
+    Correo">
+    <br>
+    Horarios:
+    <input type="text" value="{{ empleado [4] }}" name="txtHorarios" id="txtHorarios">
+    <br>
+    Foto de perfil:
+    <br>
+    <img class="img-thumbnail" width="100" src="{{url_for('fotoperfil', nombreFoto=empleado[5])}}" alt="{{(empleado[5])}}">
+    <br>
+    <input type="file" name="txtFoto" id="txtFoto">
+    <br>
+    <br>
+    <input type="submit" value="Editar">
+    </form>
+{% endfor %}
+{% include 'footer.html' %}
